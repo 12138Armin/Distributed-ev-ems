@@ -18,9 +18,9 @@ Output: Trained memory-enhanced front-rear torque-allocation policy πθ.
 12:      Randomly sample a driving segment from the training set;
 13:      Reset the environment and initialize the state-sequence buffer;
 14:      for each 10-ms control step t do
-15:          Construct the L-step state sequence s[t-L+1:t] (L = 150);
+15:          Construct the Th -step state sequence s[t-Th+1:t] (Th = 150);
 16:          Normalize the state sequence to [-1, 1] using min-max normalization;
-17:          Select a(t) = πθ(s[t-L+1:t]) + ε, ε ~ N(0, σ2), σ = 0.1;
+17:          Select a(t) = πθ(s[t- Th +1:t]) + ε, ε ~ N(0, σ2), σ = 0.1;
 18:          Project a(t) onto the feasible front-rear torque region;
 19:          Execute a(t) and update the vehicle environment and SOC;
 20:          Compute r(t) from the normalized tracking, energy-consumption, and jerk terms;

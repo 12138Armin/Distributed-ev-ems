@@ -34,11 +34,10 @@ Output: Trained memory-enhanced front-rear torque-allocation policy πθ.
 28:          end if
 29:      end for
 30:  end for
-31:  return πθ;
-32:  // Phase 4. Policy evaluation
-33:  Repeat the training procedure using three independent seeds;
-34:  Report the training statistics as mean ± standard deviation;
-35:  Evaluate the converged policies on the validation cycle;
-36:  Validate real-time execution on the HIL platform;
-37:  Evaluate the three independently trained policies on the held-out test segments;
-
+31:  // Phase 4. Policy evaluation
+32:  Repeat the training procedure using three independent seeds;
+33:  Report the training statistics as mean ± standard deviation;
+34:  Evaluate the converged policies on the validation cycle;
+35:  Validate real-time execution on the HIL platform;
+36:  Evaluate the three independently trained policies on the held-out test segments; 
+37:  return πθ;
